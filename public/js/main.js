@@ -17,7 +17,7 @@ document.getElementById('shortenBtn').addEventListener('click', async () => {
         const resultElement = document.getElementById('result');
         resultElement.innerHTML = `Shortened URL: <a href="${shortenedUrl}" target="_blank">${shortenedUrl}</a>`;
     } catch (err) {
-        console.error('Error shortening the URL : ', err);
+        console.log('Error shortening the URL : ', err);
         alert('Error shortening the URL , PLEASE TRY AGAIN');
     }
 
