@@ -11,7 +11,9 @@ const app=express()
 app.use(bodyParser.json())
 app.use(express.json())
 app.use(cors({
-    origin: 'https://appshorty.netlify.app/' 
+    origin: 'https://appshorty.netlify.app', // Replace with your Netlify domain
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type']
 }));
 app.use(express.static(__dirname+'/../public'))
 app.use('/',urlRoutes)
