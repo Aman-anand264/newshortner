@@ -3,6 +3,7 @@ const bodyParser=require('body-parser')
 const connectDB = require('./db')
 const urlRoutes=require('./routes/urlRoutes')
 const path=require('path')
+const cors = require('cors');
 
 
 connectDB(); 
@@ -12,6 +13,9 @@ app.use(bodyParser.json())
 app.use(express.json())
 app.use(express.static(__dirname+'/../public'))
 app.use('/',urlRoutes)
+app.use(cors({
+    origin: 'https://urlappshorty.netlify.app/' 
+}));
 
 app.use(express.urlencoded({extended:false}))
 
