@@ -5,7 +5,7 @@ document.getElementById('shortenBtn').addEventListener('click', async () => {
         return;
     }
     try {
-        const response = await fetch('https://newshortner-87el.onrender.com', {
+        const response = await fetch('https://newshortner-87el.onrender.com/shorten', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
