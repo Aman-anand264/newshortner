@@ -5,7 +5,6 @@ const urlRoutes=require('./routes/urlRoutes')
 const path=require('path')
 const cors = require('cors');
 
-
 connectDB(); 
 const PORT=3000
 const app=express()
@@ -14,7 +13,7 @@ app.use(express.json())
 app.use(express.static(__dirname+'/../public'))
 app.use('/',urlRoutes)
 app.use(cors({
-    origin: 'https://urlappshorty.netlify.app/' 
+    origin: 'https://appshorty.netlify.app/' 
 }));
 
 app.use(express.urlencoded({extended:false}))
