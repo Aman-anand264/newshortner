@@ -10,11 +10,12 @@ const PORT=3000
 const app=express()
 app.use(bodyParser.json())
 app.use(express.json())
-app.use(express.static(__dirname+'/../public'))
-app.use('/',urlRoutes)
 app.use(cors({
     origin: 'https://appshorty.netlify.app/' 
 }));
+app.use(express.static(__dirname+'/../public'))
+app.use('/',urlRoutes)
+
 
 app.use(express.urlencoded({extended:false}))
 
